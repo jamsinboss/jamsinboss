@@ -2661,6 +2661,7 @@ input, select, textarea {
 		header.major p {
 			font-size: 1.1em;
 			letter-spacing: -0.025em;
+			word-break: keep-all; /* 단어 기준 줄바꿈 */
 		}
 
 		header.major.special {
@@ -2693,6 +2694,11 @@ input, select, textarea {
 
 				header.major p br {
 					display: none;
+				}
+
+				header.major p.noignore br {
+					display: block;
+					/* <p class="noignore"> 안에 있는 <br> 태그는 모바일에서 무시되지 않음 */
 				}
 
 		footer.major {
