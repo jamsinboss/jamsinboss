@@ -54,6 +54,7 @@
 							<li><a href="#intro" class="active">JS BOSS 소개</a></li>
 							<li><a href="#musicRequest">신청곡</a></li>
 							<li><a href="#hiring">40기 모집</a></li>
+							<li><a href="#schedule">방송 일정</a></li>
 							<li><a href="#faq">FAQ</a></li>
                             <li><a href="#suggestion">건의</a></li>
 						</ul>
@@ -65,30 +66,31 @@
 						<!-- Introduction -->
 							<section id="intro" class="main">
 								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2 class="boss">BOSS</h2>
-										</header>
-										<p class="boss"><b>Broadcasting Of Student System</b><br/>잠신중학교 방송부(aka. JS BOSS)는 잠신중학교 3대 동아리 중 하나이며,<br/>점심 방송, 교내 행사, 잠신제 등 학교 내 방송을 담당하는 동아리입니다.</p>
-										<ul class="actions">
-                                            <!-- Now Not Using -->
-										</ul>
-									</div>
+										<div class="content">
+											<header class="major">
+												<h2 class="boss">BOSS</h2>
+											</header>
+											<p class="boss"><b>Broadcasting Of Student System</b><br/>잠신중학교 방송부(aka. JS BOSS)는 잠신중학교 3대 동아리 중 하나이며,<br/>점심 방송, 교내 행사, 잠신제 등 학교 내 방송을 담당하는 동아리입니다.</p>
+											<ul class="actions">
+												<!-- Now Not Using -->
+											</ul>
+										</div>
 									<span class="image"><img src="images/intro_image.jpeg" alt="" style="width:300px; height:300px;"></span>
 								</div>
 							</section>
                         
 						<!-- Music Request Section -->
+					
 							<section id="musicRequest" class="main special">
-								<header class="major" style="margin-bottom:30px;">
-									<h2>신청곡</h2>
-									<p  style="margin-bottom:30px;">잠신중학교 방송부는 여러분이 신청하신 곡들을 점심시간에 시청하실 수 있도록 신청곡을 받고 있습니다.<br/>아래의 버튼을 통해 신청 사이트에 접속하시어 양식에 맞게 신청해주세요!</p>
-								</header>
-								<footer class="major" style="margin-top:30px;">
-									<ul class="actions special">
-										<li><a href="https://music.jamsinboss.com" target="_blank" class="button">신청하기</a></li>
-									</ul>
-								</footer>
+									<header class="major" style="margin-bottom:30px;">
+										<h2>신청곡</h2>
+										<p style="margin-bottom:30px;">잠신중학교 방송부는 여러분이 신청하신 곡들을 점심시간에 시청하실 수 있도록 신청곡을 받고 있습니다.<br/>아래의 버튼을 통해 신청 사이트에 접속하시어 양식에 맞게 신청해주세요!</p>
+									</header>
+									<footer class="major" style="margin-top:30px;">
+										<ul class="actions special">
+											<li><a href="https://music.jamsinboss.com" target="_blank" class="button">신청하기</a></li>
+										</ul>
+									</footer>
 							</section>
 							
 						<!-- Hiring Section -->
@@ -120,6 +122,18 @@
 								</footer>
 							</section>
 				        
+						<!-- Schedule Section -->
+							<section id="schedule" class="main special" style="padding-bottom:0px;">
+								<header class="major" style="margin-bottom:10px;">
+									<h2>방송 일정</h2>
+									<ul>
+										<p>잠신중학교 방송부의 방송 일정을 확인하시려면, 아래 버튼을 눌러주세요.</p>
+										<a href="https:/jamsinboss.com/schedule.html" class="button">방송 일정 확인하기</a>
+									</ul>
+								</header>
+							</section>
+						<br/>
+
 						<!-- FAQ Section -->
 							<section id="faq" class="main special" style="padding-bottom:0px;">
 								<header class="major" style="margin-bottom:10px;">
@@ -136,7 +150,7 @@
 								<header class="major" style="margin-bottom:10px;">
                                     <h2>건의</h2>
                                     <ul>
-                                        <p class="noignore">더 나은 서비스를 위한 개선방안을 제안하고 싶으시다면, 아래 버튼을 통해 건의해주십시오.
+                                        <p class="noignore">더 나은 서비스를 위한 개선방안을 제안하고 싶으시다면, 아래 버튼을 통해 건의해주세요.
                                         </p>
                                         <footer class="major">
                                            <ul class="actions special">
@@ -199,6 +213,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- <script src="assets/js/scrollWeb.js"></script> -->
+
+			<script>
+
+				let observer = new IntersectionObserver((e) => {
+					e.forEach((d) => {
+						if(d.isIntersecting) {
+							d.target.style.opacity = 1;
+						} else {
+							d.target.style.opacity = 0;
+						}
+					})
+				})
+
+				let scroll = document.getElementsById('scroll');
+				observer.observe(scroll);
+
+
+			</script>
 
 	</body>
 </html>
