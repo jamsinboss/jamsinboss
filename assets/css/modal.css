@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  
+    width: 80%;
+  
+    padding: 40px;
+  
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.37);
+    border: 1px solid #1C2B4F;
+
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+
+
+.modal-close {
+  display: inline;
+  float: right;
+  margin-top: 4px;
+  padding-right: 10px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px gray;
+  color: #1C2B4F;
+}
+
+.modal-content p {
+  margin-top: 20px;
+  text-align: left;
+  color: #1C2B4F;
+}
+
+.modal-content h3 {
+  color: #1C2B4F;
+}
+
+.modal-content a:hover {
+  color: #510082;
+}
