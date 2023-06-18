@@ -39,6 +39,11 @@
 	</head>
 	<body class="is-preload">
 	    
+		<!-- Pop-up Img -->
+		<div class="open-banner">
+			<p><b>7월 19일, 홈페이지가 임시 이전됩니다.</b></p>
+		</div>
+
 		<!-- Modal Pop-up -->
 			<div class="modal-background">
 				<div class="modal">
@@ -46,32 +51,43 @@
 						<img src="images/close.png" style="width: 15px; height: 15px"></image>
 					</div>
 					<div class="modal-content">
-						<h3>도메인 관련 정정사항</h3>
+						<h3>도메인 임시 이전 안내</h3>
 						<p>
-							시청자 여러분의 불편함을 일부 덜어내고자,<br/>
-							여름방학식 이후 도메인을 이전하는 것으로 변경키로 하였습니다.<br/>
-							따라서, <b style="color: red;">7월 19일까지 본 도메인을 정상적으로 이용하실 수 있습니다.</b><br/>
-							혼동 드려 죄송합니다.<br/>
+							본 도메인(jamsinboss.com) 등록비용 학교 예산지원과 관련하여<br/>
+							도메인의 소유권을 학교측으로 이양하기 위해 여름방학식<br/>
+							이후로부터 약 한 달간 홈페이지를 다음과 같이 임시 이전합니다.<br/>
+							<br/>
+							임시 도메인 주소: <b style="color: red;">jamsinboss.kro.kr</b><br/>
+							기간: <b style="color: red;">2023. 7. 19. ~ 8월 말(자세한 일정 추후공지)</b><br/>
+							<br/>
+							불편 드려 죄송합니다.<br/>
 							<br/>
 							- 홈페이지 담당자 -
 						</p>
 					</div>
 					<script>
+						// 변수 선언
 						const modal = document.querySelector(".modal");
+						const openImg = document.querySelector(".open-banner")
 						const closeBtn = document.querySelector(".modal-close");
 						const body = document.getElementsByTagName("body")[0];
 						const bg = document.querySelector(".modal-background");
-	
-						if (modal.style.display != "none") {
-							body.style.overflow = "hidden";
-							bg.style.backdropFilter = "blur(5px)"
-						}
-	
+
+
+						openImg.addEventListener("click", e => (
+							modal.style.display = "block",
+							modal.style.position = "fixed",
+							body.style.overflow = "hidden",
+							bg.style.backdropFilter = "blur(5px)",
+							bg.style.zIndex = "100000"
+						))
+							
+						// 모달창 닫기
 						closeBtn.addEventListener("click", e => (
 							modal.style.display = "none",
 							body.style.overflow = "auto",
 							bg.style.backdropFilter = "none",
-							bg.style.zIndex = -1
+							bg.style.zIndex = "-1"
 						))
 					</script>
 				</div>
