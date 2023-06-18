@@ -1,10 +1,24 @@
+.open-banner {
+  background-color: #1C2B4F;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.open-banner p {
+  padding-top: 10px;
+}
+
 .modal {
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 50%;
-  
+
+    display: none;
+
     width: 80%;
-  
+
     padding: 40px;
   
     background-color: rgb(255, 255, 255);
@@ -30,10 +44,16 @@
   margin-top: 20px;
   text-align: left;
   color: #1C2B4F;
+  margin-bottom: 20px;
 }
 
-.modal-content h3 {
+.modal-content h3, label, a {
   color: #1C2B4F;
+  z-index: 100000;
+}
+
+.modal-content a {
+  font-size: small;
 }
 
 .modal-content a:hover {
@@ -48,5 +68,5 @@
   width: 100%;
   height: 100%;
   
-  z-index: 100000;
+  z-index: -1;
 }
