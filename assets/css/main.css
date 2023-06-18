@@ -24,11 +24,13 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -76,6 +78,18 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+/* Hidden Scrollbar */
+
+	html {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	html::-webkit-scrollbar {
+		display: none;
+	}
+
 
 /* Basic */
 
@@ -3713,7 +3727,7 @@ input, select, textarea {
 
 		#footer .copyright {
 			width: 100%;
-			margin: 2.5em 0 2em 0;
+			margin: 2.5em 0 0 0;
 			font-size: 0.8em;
 			text-align: center;
 		}

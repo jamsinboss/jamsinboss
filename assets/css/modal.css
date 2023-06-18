@@ -47,17 +47,9 @@
   margin-bottom: 20px;
 }
 
-.modal-content h3, label, a {
+.modal-content h3, label {
   color: #1C2B4F;
   z-index: 100000;
-}
-
-.modal-content a {
-  font-size: small;
-}
-
-.modal-content a:hover {
-  color: #510082;
 }
 
 .modal-background {
