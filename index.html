@@ -38,11 +38,6 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-	    
-		<!-- Pop-up Img -->
-		<div class="open-banner">
-			<p><b>[공지] 7월 19일, 홈페이지가 임시 이전됩니다.</b></p>
-		</div>
 
 		<!-- Modal Pop-up -->
 			<div class="modal-background">
@@ -53,41 +48,33 @@
 					<div class="modal-content">
 						<h3>도메인 임시 이전 안내</h3>
 						<p>
-							본 도메인(jamsinboss.com) 등록비용 학교 예산지원과 관련하여<br/>
-							도메인의 소유권을 학교측으로 이양하기 위해 여름방학식<br/>
-							이후로부터 약 한 달간 홈페이지를 다음과 같이 임시 이전합니다.<br/>
+							본 홈페이지 도메인(jamsinboss.com) 등록비용 학교 예산지원과 관련하여<br/>
+							도메인의 소유권을 학교측으로 이양하기 위해<br/>
+							오는 19일로부터 약 한 달간 홈페이지를 다음과 같이 임시 이전합니다.<br/>
 							<br/>
-							임시 도메인 주소: <b style="color: red;">jamsinboss.kro.kr</b><br/>
-							기간: <b style="color: red;">2023. 7. 19. ~ 8월 말(자세한 일정 추후공지)</b><br/>
+							임시 도메인 주소: <b style="color: red;">https://jamsinboss.kro.kr</b><br/>
+							기간: 2023. 7. 19. ~ 8월 말(자세한 일정 추후공지)<br/>
+							문의: 잠신중학교 방송부 홈페이지 담당자(<a href="mailto:xodn@jamsinboss.com">xodn@jamsinboss.com</a>, <a href="https://instagram.com/xodn09_">@xodn09_</a>)<br/>
 							<br/>
 							불편 드려 죄송합니다.<br/>
-							<br/>
-							- 홈페이지 담당자 -
 						</p>
 					</div>
 					<script>
-						// 변수 선언
 						const modal = document.querySelector(".modal");
-						const openImg = document.querySelector(".open-banner")
 						const closeBtn = document.querySelector(".modal-close");
 						const body = document.getElementsByTagName("body")[0];
 						const bg = document.querySelector(".modal-background");
-
-
-						openImg.addEventListener("click", e => (
-							modal.style.display = "block",
-							modal.style.position = "fixed",
-							body.style.overflow = "hidden",
-							bg.style.backdropFilter = "blur(5px)",
-							bg.style.zIndex = "100000"
-						))
-							
-						// 모달창 닫기
+	
+						if (modal.style.display != "none") {
+							body.style.overflow = "hidden";
+							bg.style.backdropFilter = "blur(5px)"
+						}
+	
 						closeBtn.addEventListener("click", e => (
 							modal.style.display = "none",
 							body.style.overflow = "auto",
 							bg.style.backdropFilter = "none",
-							bg.style.zIndex = "-1"
+							bg.style.zIndex = -1
 						))
 					</script>
 				</div>
