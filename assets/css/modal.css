@@ -4,6 +4,7 @@
   left: 50%;
 
   width: 80%;
+  max-width: 800px;
 
   padding: 40px;
 
@@ -27,9 +28,11 @@ color: #1C2B4F;
 }
 
 .modal-content p {
-margin-top: 20px;
+margin-top: 10px;
+margin-bottom: 0;
 text-align: left;
 color: #1C2B4F;
+
 }
 
 .modal-content h3 {
