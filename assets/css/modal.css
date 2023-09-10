@@ -30,7 +30,7 @@
 .modal-content p {
   margin-top: 10px;
   margin-bottom: 0;
-  text-align: center;
+  text-align: left;
   color: #1C2B4F;
 }
 
@@ -41,6 +41,10 @@
 
 .modal-content h3 {
 color: #1C2B4F;
+}
+
+.modal-content a{
+  color: #1C2B4F;
 }
 
 .modal-content a:hover {
